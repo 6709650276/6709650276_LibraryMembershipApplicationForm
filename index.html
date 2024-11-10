@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Membership Form</title>
+</head>
+<body>
+    <h2>แบบฟอร์มการสมัครสมาชิกห้องสมุด</h2>
+    <form>
+        <label for="fullNameTh">ชื่อ - นามสกุล (ภาษาไทย): *</label>
+        <input type="text" id="fullNameTh" name="fullNameTh" required><br><br>
+
+        <label for="fullNameEn">ชื่อ - นามสกุล (ภาษาอังกฤษ): *</label>
+        <input type="text" id="fullNameEn" name="fullNameEn" required><br><br>
+
+        <label>เพศ: *</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">ชาย</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">หญิง</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">อื่น ๆ</label><br><br>
+
+        <label for="studentId">รหัสนักศึกษา: *</label>
+        <input type="text" id="studentId" name="studentId" pattern="\d{8,}" title="กรุณากรอกรหัสนักศึกษาอย่างน้อย 8 ตัวเลข" required><br><br>
+
+        <label for="faculty">คณะที่ศึกษา: *</label>
+        <input type="text" id="faculty" name="faculty" required><br><br>
+
+        <label for="email">ที่อยู่อีเมล: *</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="dob">วันเดือนปีเกิด: *</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="bookType">ประเภทของหนังสือที่สนใจ:</label>
+        <select id="bookType" name="bookType">
+            <option value="fiction">นวนิยาย</option>
+            <option value="nonFiction">สารคดี</option>
+            <option value="sciFi">วิทยาศาสตร์</option>
+            <option value="math">คณิตศาสตร์</option>
+            <option value="language">ภาษา</option>
+            <option value="other">อื่น ๆ</option>
+        </select><br><br>
+
+        <label>ต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่:</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">ใช่</label><br><br>
+
+        <button type="submit">ส่งแบบฟอร์ม</button>
+        <button type="reset">ล้างข้อมูล</button>
+    </form>
+</body>
+</html>
